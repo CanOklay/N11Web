@@ -68,8 +68,8 @@ public class BasePage extends BaseTest {
         }
     }
 
-    public void getTitle() {
-        driver.getTitle();
+    public String getTitle() {
+        return driver.getTitle();
     }
 
     public void assertEquals(String actualText, String expectedText) {

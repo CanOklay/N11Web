@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suiste SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="n11">
+    <test name="Login Scenarios">
+        <classes>
+            <class name="com.n11.test.LoginTest"/>
+        </classes>
+    </test>
+</suite>
