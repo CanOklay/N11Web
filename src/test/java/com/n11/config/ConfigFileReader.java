@@ -10,10 +10,9 @@ public class ConfigFileReader {
 
     private final Properties properties;
 
-
     public ConfigFileReader(){
         BufferedReader reader;
-        String propertyFilePath = "src/main/configs/configs.properties";
+        String propertyFilePath = "src/main/configuration/configs.properties";
         try {
             reader = new BufferedReader(new FileReader(propertyFilePath));
             properties = new Properties();
@@ -29,10 +28,10 @@ public class ConfigFileReader {
         }
     }
 
-    public String getEnv() {
-        String env = properties.getProperty("environment");
-        if(env != null) return env;
-        else throw new RuntimeException("Environment not specified in the configs.properties file.");
+    public String getBrowser() {
+        String browser = properties.getProperty("browser");
+        if(browser != null) return browser;
+        else throw new RuntimeException("Browser not specified in the configs.properties file.");
     }
 
     public long getImplicityWait() {
@@ -50,6 +49,18 @@ public class ConfigFileReader {
     public String getBaseUrl() {
         String url = properties.getProperty("baseUrl");
         if(url != null) return url;
+        else throw new RuntimeException("Url not specified in the configs.properties file.");
+    }
+
+    public String getRemoteUrl() {
+        String remoteUrl = properties.getProperty("remoteUrl");
+        if(remoteUrl != null) return remoteUrl;
+        else throw new RuntimeException("Url not specified in the configs.properties file.");
+    }
+
+    public String getEnv() {
+        String environment = properties.getProperty("environment");
+        if(environment != null) return environment;
         else throw new RuntimeException("Url not specified in the configs.properties file.");
     }
 }
