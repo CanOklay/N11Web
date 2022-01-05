@@ -1,10 +1,7 @@
 package com.n11.page;
 
-import com.n11.logs.Logs;
 import com.n11.test.BaseTest;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
