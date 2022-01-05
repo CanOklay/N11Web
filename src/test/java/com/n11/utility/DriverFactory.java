@@ -1,4 +1,4 @@
-package com.n11.driver;
+package com.n11.utility;
 
 import com.n11.config.ConfigFileReader;
 import io.github.bonigarcia.wdm.WebDriverManager;

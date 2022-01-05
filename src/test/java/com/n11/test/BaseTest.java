@@ -1,7 +1,7 @@
 package com.n11.test;
 
 import com.n11.config.ConfigFileReader;
-import com.n11.driver.DriverFactory;
+import com.n11.utility.DriverFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

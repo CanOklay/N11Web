@@ -49,7 +49,7 @@ public class ConfigFileReader {
     public long getWebDriverWait() {
         String webDriverWait = properties.getProperty("webDriverWait");
         if(webDriverWait != null) return Long.parseLong(webDriverWait);
-        else throw new RuntimeException("PageLoadTimeout not specified in the configs.properties file.");
+        else throw new RuntimeException("WebdDriverWait not specified in the configs.properties file.");
     }
 
     public String getBaseUrl() {
