@@ -2,10 +2,10 @@ package com.n11.page;
 
 import com.n11.test.BaseTest;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -74,15 +74,11 @@ public class BasePage extends BaseTest {
     }
 
     public void assertTrue(boolean condition, String message) {
-        Assert.assertTrue(condition, message);
+        Assert.assertTrue(message, condition);
     }
 
     public void assertFalse(boolean condition, String message) {
-        Assert.assertFalse(condition, message);
-    }
-
-    public void assertEqualsInteger(String first, int second) {
-        Assert.assertEquals(first, second);
+        Assert.assertFalse(message, condition);
     }
 
     public void assertFail() {
