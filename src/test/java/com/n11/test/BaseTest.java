@@ -2,9 +2,9 @@ package com.n11.test;
 
 import com.n11.config.ConfigFileReader;
 import com.n11.utility.DriverFactory;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
@@ -13,7 +13,7 @@ public class BaseTest extends DriverFactory {
 
     ConfigFileReader configFileReader = new ConfigFileReader();
 
-    @BeforeSuite
+    @Before
     public void setup() throws MalformedURLException {
         if (configFileReader.getEnv().equals("local")) {
             if (configFileReader.getBrowser().equals("opera")) {
@@ -33,7 +33,7 @@ public class BaseTest extends DriverFactory {
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(configFileReader.getWebDriverWait()));
     }
 
-    @AfterSuite
+    @After
     public void after() {
         if (driver != null) {
             driver.close();
