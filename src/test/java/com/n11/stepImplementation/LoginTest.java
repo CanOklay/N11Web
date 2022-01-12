@@ -1,51 +1,32 @@
 package com.n11.stepImplementation;
 
 import com.n11.page.BasePage;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import static com.n11.constant.Constants.EXPECTED_TITLE_TEXT;
-
 public class LoginTest extends BasePage {
-
-    //Give user is on the login page
-    //When user enters correct username and password
-    //Then user gets confirmation
 
     Logger logger = LogManager.getLogger(com.n11.stepImplementation.LoginTest.class.getName());
 
-    @Given("user is on the login page")
-    public void user_is_on_the_login_page() {
-        try {
-            driver.getTitle();
-        } catch (Exception e) {
-            logger.error(e.getMessage());
-            assertFail();
-        }
-        /*String title = getTitle();
-        assertEquals(title, EXPECTED_TITLE_TEXT);
-        logger.info("Title: " + title);*/
+    @Given("user is on login page")
+    public void user_is_on_login_page() {
+        System.out.println("asdb");
+    }
+    @When("user enters username and password")
+    public void user_enters_username_and_password() {
+        System.out.println("asdb");
+    }
+    @And("clicks on login button")
+    public void clicks_on_login_button() {
+        System.out.println("asdb");
+    }
+    @Then("user is navigated to the homepage")
+    public void user_is_navigated_to_the_homepage() {
+        System.out.println("asdb");
     }
 
-    @When("user enters correct username and password")
-    public void user_enters_correct_username_and_password() {
-        try {
-            driver.getTitle();
-        } catch (Exception e) {
-            logger.error(e.getMessage());
-            assertFail();
-        }
-    }
-
-    @When("user gets confirmation")
-    public void user_gets_confirmation() {
-        try {
-            driver.getTitle();
-        } catch (Exception e) {
-            logger.error(e.getMessage());
-            assertFail();
-        }
-    }
 }

@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage extends BaseTest {
+public abstract class BasePage extends BaseTest {
 
     public WebElement findElement(By by) {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(by));

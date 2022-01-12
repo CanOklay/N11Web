@@ -1,10 +1,12 @@
 package com.n11.runner;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="feature", glue = "stepImplementation")
+@CucumberOptions(features="src/test/java/com/n11/features",
+        glue = {"stepImplementation"},
+        monochrome = true)
 public class TestRunner {
 }

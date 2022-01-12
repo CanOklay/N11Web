@@ -2,8 +2,8 @@ package com.n11.test;
 
 import com.n11.config.ConfigFileReader;
 import com.n11.utility.DriverFactory;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
