@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suiste SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="N11">
+    <listeners>
+        <listener class-name="com.n11.listener.Listener"/>
+    </listeners>
     <test name="Regression">
         <classes>
             <class name="com.n11.runner.TestRunner"/>
